@@ -94,9 +94,7 @@ $btn-border-radius: 0;
 
 .dots {
   @extend .my-5;
-
-  text-align: center;
-  letter-spacing: 1.5rem;
+  @extend .text-center;
   font-size: 2rem;
   pointer-events: none;
 }
@@ -176,8 +174,69 @@ $btn-border-radius: 0;
   }
 }
 
+#process {
+  @extend .border-bottom;
+  @extend .bg-dark;
+  color: white;
+  padding-top: 100px;
+
+  .steps {
+
+    > .step-wrapper {
+      @extend .d-block;
+      border: 0 solid white;
+      width: 50%;
+
+      &:nth-child(odd) {
+        @extend .text-right;
+        @extend .ml-auto;
+        border-left-width: 4px;
+        box-sizing: content-box;
+      }
+
+      &:nth-child(even) {
+        @extend .text-left;
+        @extend .mr-auto;
+        border-right-width: 4px;
+      }
+
+      &:first-child {
+        padding-top: 100px;
+      }
+
+      &:last-child {
+        padding-bottom: 100px;
+      }
+
+      > .step {
+        @extend .bg-white;
+        @extend .p-3;
+        @extend .border;
+        @extend .d-inline-block;
+        @extend .overflow-hidden;
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.15);
+
+        > img {
+          width: 200px;
+          height: 200px;
+        }
+
+        > span {
+          @extend .mt-3;
+          @extend .d-block;
+          @extend .text-center;
+          @extend .font-weight-bold;
+          @extend .pt-3;
+          @extend .border-top;
+          color: $primary;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
 #includes {
-  @extend .bg-light;
   @extend .border-bottom;
   padding-top: 100px;
   padding-bottom: 100px;
