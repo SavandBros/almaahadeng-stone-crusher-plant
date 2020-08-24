@@ -130,7 +130,36 @@ $btn-border-radius: 0;
   }
 }
 
+#information {
+  @extend .border-bottom;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .row > div:first-child {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  img {
+    width: 48px;
+    height: 48px;
+    opacity: 0.75;
+  }
+
+  video {
+    @extend .shadow-sm;
+    @extend .p-2;
+    @extend .bg-secondary;
+    display: block;
+    max-width: 100%;
+    pointer-events: none;
+  }
+}
+
 #features {
+  @extend .bg-light;
   @extend .border-bottom;
   padding-top: 100px;
   padding-bottom: 100px;
