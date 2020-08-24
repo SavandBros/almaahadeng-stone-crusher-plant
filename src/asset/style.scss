@@ -286,19 +286,17 @@ $btn-border-radius: 0;
         padding: 0 $grid-gutter-width;
         background-image: url("img/bg-8.jpg");
         background-position: center;
-        background-size: cover;
+        background-size: 100%;
         transition: $transition-base;
         border-radius: $border-radius-sm;
+        cursor: pointer;
 
-        &[href] {
-          &:hover {
-            margin-top: -10px;
-            cursor: pointer;
-          }
+        &:hover {
+          background-size: 150%;
+        }
 
-          &:active {
-            opacity: 0.25;
-          }
+        &[href]:active {
+          opacity: 0.25;
         }
       }
 
