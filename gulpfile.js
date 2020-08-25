@@ -107,7 +107,7 @@ gulp.task("serve:html", () => {
 });
 
 gulp.task("serve:style", () => {
-  return gulp.src("src/asset/style.scss")
+  return gulp.src("src/asset/*.scss")
     .pipe(sass({
       outputStyle: "nested",
       precision: 10,
