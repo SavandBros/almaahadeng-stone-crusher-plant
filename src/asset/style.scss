@@ -111,9 +111,10 @@ $btn-border-radius: 0;
   padding-bottom: 100px;
   min-height: 0;
   transition: $transition-base;
-  background-image: url("img/bg-1.jpg");
+  background-image: url("img/main.jpg");
   background-size: cover;
-  animation: shake 5s infinite;
+  background-position: center;
+  box-shadow: inset 0 0 0 10000px rgba($dark, 0.8);
 }
 
 #header {
@@ -300,8 +301,8 @@ $btn-border-radius: 0;
         box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.15);
 
         > img {
-          width: 200px;
-          height: 200px;
+          width: 256px;
+          height: 256px;
         }
 
         > span {
@@ -393,10 +394,12 @@ $btn-border-radius: 0;
   }
 }
 
-#processing-materials,
-#vibro-feeder,
-#crusher-jaw,
-#inquiry {
+#raw-materials,
+#vibrating-feeder,
+#jaw-crusher,
+#inquiry,
+#impact-crusher,
+#vibrating-screen {
   @extend .container-fluid;
   padding: 0;
   display: flex;
@@ -404,22 +407,36 @@ $btn-border-radius: 0;
   position: relative;
   background: white;
 
-  &#processing-materials {
-    .image {
-      background-image: url("img/bg-2.jpg");
-    }
+  &#raw-materials .image {
+    background-image: url("img/raw-materials.jpg");
+    box-shadow: inset 0 0 0 10000px rgba($dark, 0.5);
+    background-size: cover;
   }
 
-  &#vibro-feeder {
-    .image {
-      background-image: url("img/bg-7.jpg");
-    }
+  &#vibrating-feeder .image {
+    background-image: url("img/vibrating-feeder.gif");
+    box-shadow: inset 0 0 0 10000px rgba($dark, 0.1);
   }
 
-  &#crusher-jaw {
-    .image {
-      background-image: url("img/bg-4.jpg");
-    }
+  &#jaw-crusher .image {
+    background-image: url("img/jaw-crusher.gif");
+    background-color: white;
+    box-shadow: inset 0 0 0 10000px rgba($dark, 0.1);
+  }
+
+  &#vibrating-feeder .image {
+    background-image: url("img/vibrating-feeder.gif");
+    background-color: white;
+    box-shadow: inset 0 0 0 10000px rgba($dark, 0.1);
+  }
+
+  &#impact-crusher .image {
+    background-image: url("img/impact-crusher.gif");
+  }
+
+  &#vibrating-screen .image {
+    background-image: url("img/vibrating-screen.gif");
+    background-color: #dddddd;
   }
 
   > .row {
@@ -428,10 +445,10 @@ $btn-border-radius: 0;
     width: 100%;
 
     > .image {
-      background-size: cover;
+      background-size: 100%;
       background-position: center;
-      animation: blink 5s infinite;
-      transition: $transition-base;
+      background-repeat: no-repeat;
+      background-color: #f0f0f0;
     }
 
     > .text {
